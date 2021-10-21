@@ -17,10 +17,12 @@ import json
 
 root = Tk()
 root.title('Example')
-root.geometry("800x500")
+
 # root.tk.call('tk', 'scaling', 1.77)
 # root.attributes('-fullscreen', True)
-
+screen_width=root.winfo_screenwidth()
+screen_height=root.winfo_screenheight()
+root.geometry(str(int(screen_width/2))+'x'+str(int(screen_height/1.05)))
 
 Grid.rowconfigure(root, index=0, weight=1)
 Grid.rowconfigure(root, index=1, weight=1)
@@ -333,37 +335,48 @@ button_quit=Button(root,text='Exit',command=root.quit)
 button_quit.grid(row=7,column=0)
 
 #####################Open_FILE###############################
-def resize_image(event):
-    global copy_of_image
-    global label
-    global image
-    global photo
-    global my_label
-    global my_image_label
-    new_width = event.width
-    new_height = event.height
-    image = copy_of_image.resize((new_width, new_height))
-    photo = ImageTk.PhotoImage(image)
-    my_image_label.config(image = photo)
-    my_image_label = photo #avoid garbage collection
+# def resize_image(event):
+#     global copy_of_image
+#     global label
+#     global image
+#     global photo
+#     global my_label
+#     global my_image_label
+#     new_width = event.width
+#     new_height = event.height
+#     image = copy_of_image.resize((new_width, new_height))
+#     photo = ImageTk.PhotoImage(image)
+#     my_image_label.config(image = photo)
+#     my_image_label = photo #avoid garbage collection
 
 def openimage():
-    global image
+    global screen_width
+    global screen_height
     global my_label
-    global copy_of_image
-    global photo
-    global label
     global my_image_label
+    global new_image
+    global photo
+    global image
     fnamecontainer = []
-    root.filename = fd.askopenfilename(initialdir='E:\HiWi_Job\HiWi3\CCT_ML-main', title='Select file', filetypes=(
+    root.filename = fd.askopenfilename(title='Select file', filetypes=(
     ('jpg files', '*.jpg'), ('png file', '*.png'), ('jpeg file', '*.jpeg'), ('all files', '*.*')))
     my_label = Label(root, text=root.filename)
     my_label.grid(row=8, column=0, columnspan=5)
     image = Image.open(root.filename)
-    copy_of_image = image.copy()
-    photo = ImageTk.PhotoImage(image)
-    my_image_label = ttk.Label(root, image=photo)
-    my_image_label.bind('<Configure>', resize_image)
+    # copy_of_image = image.copy()
+    
+    ####REsizing of the image to be half the screen height
+    image_width=image.size[0]
+    image_height=image.size[1]
+    new_image_height=screen_height/2
+    delta_change=(new_image_height-image_height)/image_height
+    new_image_width=image_width*(1+delta_change)
+    new_image=image.resize((int(new_image_width),int(new_image_height)))
+    # new_image.save('test_image.jpg')
+    # filename = 'test_image.jpg'
+    photo = ImageTk.PhotoImage(new_image)
+    my_image_label = Label(image=photo)
+    # my_image_label.bind('<Configure>', resize_image)
     my_image_label.grid(row=0, column=0, columnspan=5)
     for i in root.filename.split('/'):
         fnamecontainer.append(i)
@@ -372,9 +385,9 @@ def openimage():
     newjsonfile = open(imagefname + '.json','w')
 
 
+
 imagebutton = Button(root, text='Select File', command=openimage)
 imagebutton.grid(row=0, column=0, columnspan=5)
-
 
 root.mainloop()
 

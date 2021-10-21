@@ -16,6 +16,17 @@ import json
 
 root=Tk()
 root.title('Example')
+# root.tk.call('tk', 'scaling', 1.0)
+
+print(root.winfo_screenwidth())
+print(root.winfo_screenheight())
+screen_width=root.winfo_screenwidth()
+screen_height=root.winfo_screenheight()
+# root.geometry(str(int(screen_width/2))+'x'+str(screen_height))
+
+
+# root.geometry('800x1920')
+
 
 State=NONE
 Status=False
@@ -36,7 +47,8 @@ py=[]
 def nullf(event):
     pass
 
-def Test_1(f,inp):
+
+def Test_1(f,inp): #####RENAME this
     c=a*np.exp(b*f(inp))
     return c
 
@@ -83,7 +95,7 @@ Temp_button.grid(row=1, column=4)
 
 ##########################TIME INPUT###############################
 
-def rightclick_Time(event):
+def rightclick_Time(event): #####Rename to left
     Time_l.append(event.x)
     print('Left')
     return Time_l
@@ -323,8 +335,16 @@ button_quit.grid(row=7,column=0)
 # open_image_button.grid(row=0,column=6)
 
 
-filename = fd.askopenfilename()
-my_img=ImageTk.PhotoImage(Image.open(filename))
+# filename = fd.askopenfilename()
+filename = 'CCT_4140.jpg'
+image = Image.open(filename)
+image_width=image.size[0]
+image_height=image.size[1]
+new_image_height=screen_height/3
+delta_change=(new_image_height-image_height)/image_height
+new_image_width=image_width*(1+delta_change)
+new_image=image.resize((int(new_image_width),int(new_image_height)))
+my_img=ImageTk.PhotoImage(new_image)
 my_label=Label(image=my_img)
 my_label.grid(row=0, column=0,columnspan=5)
 
