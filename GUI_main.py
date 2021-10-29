@@ -14,6 +14,8 @@ import numpy as np
 import math
 import json
 
+
+
 root=Tk()
 root.title('Example')
 # root.tk.call('tk', 'scaling', 1.0)
@@ -24,7 +26,7 @@ screen_width=root.winfo_screenwidth()
 screen_height=root.winfo_screenheight()
 # root.geometry(str(int(screen_width/2))+'x'+str(screen_height))
 
-
+my_image_label=Label()
 # root.geometry('800x1920')
 
 
@@ -43,6 +45,7 @@ Ferr_data={}
 Bain_data={}
 px=[]
 py=[]
+fnamecontainer = []
 
 def nullf(event):
     pass
@@ -335,6 +338,10 @@ button_quit.grid(row=7,column=0)
 # open_image_button.grid(row=0,column=6)
 
 
+
+
+imagebutton = Button(root, text='Select File', command=openimage)
+imagebutton.grid(row=0, column=0, columnspan=5)
 # filename = fd.askopenfilename()
 filename = 'CCT_4140.jpg'
 image = Image.open(filename)
@@ -347,6 +354,10 @@ new_image=image.resize((int(new_image_width),int(new_image_height)))
 my_img=ImageTk.PhotoImage(new_image)
 my_label=Label(image=my_img)
 my_label.grid(row=0, column=0,columnspan=5)
+
+imagebutton = Button(root, text='Select File', command=openimage)
+imagebutton.grid(row=0, column=0, columnspan=5)
+
 
 
 root.mainloop()
