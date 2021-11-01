@@ -26,17 +26,42 @@ data = json.load(f)
         # Ti=Tinitial
         # ##start iterating Ti
         # while Ti>Tfinal :
-           
         ##Iterate through phases
-Ti=500
+# finding the global maximum and minimum of the temperature data
+max=None
+min=None
 Phases=data['Phase Data']
 for i in Phases.keys():
+    pxy[i]={}
+    print(i) #here we get ferrite, pearlite, bainite
     for j in Phases[i].keys():
-       if Phases[i][j]['Temperature'][-1]>Ti & Phases[i][j]['Temperature'][0]<Ti :
-           
-           
-            
-            ##If yes interpolate the times for all the fractions in that phase. 
+        print(j) #here we get % of each phase
+        for k in Phases[i][j]['Temperature']:
+            print(k)
+            if max is None:
+                max=k
+                min=k
+            elif k>max:
+                max=k
+                # print(k)
+            elif k<min:
+                min=k
+                # print(k)
+print(min, max)
+
+
+
+
+
+
+
+
+
+
+
+
+
+           ##If yes interpolate the times for all the fractions in that phase.
             
             
             # i=+1
