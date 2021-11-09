@@ -594,7 +594,7 @@ Ferr2_button.grid(row=0, column=3)
 Ferr3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lambda : Calc_and_reset(Ferr_l_t, Ferr_l_T, Ferr_inp, f_Temp, f_Time))
 Ferr3_button.grid(row=0, column=4)
 
-##### PEARLITE PF
+################################# PEARLITE PF
 
 def leftclick_Pear(event):
     global Pear_l_T
@@ -625,15 +625,17 @@ def Calc_and_reset_Pear(time,temp,fraction,f_Temp,f_Time):
     Pear_l_T=[]
     Pear_l_t=[]
 
-# Label
+################################# Label
+
 Pearlite=Label(Phasefraction_Frame, text='Pearlite fractions', font='TkDefaultFont 9 bold', fg='blue')
 Pearlite.grid(row=1,column=0,padx=10, pady=10)
 
-# Fraction insert box
+########################## Fraction insert box
+
 Pearlite_frac= Entry(Phasefraction_Frame, width=10, borderwidth=5)
 Pearlite_frac.grid(row=1, column=1, columnspan=1, padx=10, pady=10)
 
-# Buttons
+######################### Buttons
 
 Pear1_button=Button(Phasefraction_Frame, text='Pear_reg on', command=lambda: [Pear_reg_on(), Get_data_Pear()])
 Pear1_button.grid(row=1, column=2)
@@ -644,7 +646,7 @@ Pear2_button.grid(row=1, column=3)
 Pear3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lambda : Calc_and_reset_Pear(Pear_l_t, Pear_l_T, Pear_inp, f_Temp, f_Time))
 Pear3_button.grid(row=1, column=4)
 
-##### BAINITE PF
+############################################## BAINITE PF
 
 def leftclick_Bain(event):
     global Bain_l_T
@@ -675,15 +677,17 @@ def Calc_and_reset_Bain(time,temp,fraction,f_Temp,f_Time):
     Bain_l_T=[]
     Bain_l_t=[]
 
-# Label
+#######################  Label
+
 Bainite=Label(Phasefraction_Frame, text='Bainite fractions', font='TkDefaultFont 9 bold', fg='blue')
 Bainite.grid(row=2,column=0,padx=10, pady=10)
 
-# Fraction insert box
+####################### Fraction insert box
+
 Bainite_frac= Entry(Phasefraction_Frame, width=10, borderwidth=5)
 Bainite_frac.grid(row=2, column=1, columnspan=1, padx=10, pady=10)
 
-# Buttons
+###################### Buttons
 
 Bain1_button=Button(Phasefraction_Frame, text='Bain_reg on', command=lambda: [Bain_reg_on(), Get_data_Bain()])
 Bain1_button.grid(row=2, column=2)
@@ -695,12 +699,12 @@ Bain3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lam
 Bain3_button.grid(row=2, column=4)
 
 
-#####################EXITS###########################
+#####################EXITS###########################################################################################################################
 
 button_quit=Button(Phasefraction_Frame, text='Exit', command=root.quit)
 button_quit.grid(row=3,column=0)
 
-#####################IMAGE PROCESSING###############################
+#####################IMAGE PROCESSING#####################################################################################################################
 
 top = Toplevel()
 top.title('IMAGE')
@@ -758,6 +762,7 @@ imagebutton.grid(row=0, column=0, pady=10)
 root.mainloop()
 
 ###############################POST_PROCESSING#######################################################
+
 global newjsonfile
 
 Phase_Data_dict = {'Phase Data': {'Ferrite:': Ferr_data,'Pearlite:': Pear_data, 'Bainite:': Bain_data}}
@@ -767,5 +772,9 @@ Aus_dict = {'Austenitization Data:': {'Aus_Temp:': Aus_Temp_inp, 'Aus_Time:': Au
 Grain_dict = {'Grain Size Data:': {'Grain Size:': Grain_S_data}}
 Data_dict = {**Phase_Data_dict, **Critical_Temp_dict, **Comp_dict, **Aus_dict, **Grain_dict}
 Main_json = json.dumps(Data_dict, indent=4)
-newjsonfile.write(Main_json)
-newjsonfile.close()
+try:
+    newjsonfile.write(Main_json)
+    newjsonfile.close()
+except:
+    print('NO IMAGE FILE CHOSEN')
+
