@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jul 25 18:31:45 2021
+Created on Mon Dec 13 22:56:14 2021
 
 @author: aserafeim
 """
@@ -18,8 +18,8 @@ import json
 
 root = Tk()
 root.title('Example')
+# root.iconbitmap('E:/HiWi_Job/HiWi3/CCT_ML-main/icon.ico')
 root.iconbitmap('')
-
 # Getting screen dimensions and setting window geometry
 
 screen_width=root.winfo_screenwidth()
@@ -250,8 +250,6 @@ def rightclick_MsTemp(event):
 
 def Get_data_MsTemp():
     global Ms_Temp_inp
-    # input_2= int(Ms_Temp2.get()) if Ms_Temp2.get()!=Nan else 
-    print('Fail') if Ms_Temp2.get()=='' else print('s')
     Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': int(Ms_Temp2.get())}
 
 
@@ -779,4 +777,3 @@ try:
     newjsonfile.close()
 except:
     print('NO IMAGE FILE CHOSEN')
-

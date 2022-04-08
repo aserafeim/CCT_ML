@@ -1,0 +1,19 @@
+{
+    "Phase Data": {
+        "Ferrite:": {},
+        "Pearlite:": {},
+        "Bainite:": {}
+    },
+    "Critical Temp Data": {
+        "Ms_Temp:": {},
+        "Ac Temp:": {}
+    },
+    "Composition Data:": {},
+    "Austenitization Data:": {
+        "Aus_Temp:": {},
+        "Aus_Time:": {}
+    },
+    "Grain Size Data:": {
+        "Grain Size:": {}
+    }
+}

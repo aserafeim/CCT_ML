@@ -125,6 +125,7 @@ Element_data = {}
 # Manganese_data = {}
 Aus_Time_inp = {}
 Aus_Temp_inp = {}
+Log_state_1=0
 
 def nullf(event):
     pass
@@ -153,7 +154,7 @@ def Tempreg_on():
 def Tempreg_off():
     my_label.bind('<Button-1>',nullf)
     global f_Temp
-    f_Temp= interp1d(Temp_l, Temp_inp)
+    f_Temp= interp1d(Temp_l, Temp_inp,fill_value='extrapolate')
 
 # Temperature User inputs
 
@@ -214,7 +215,7 @@ def Timereg_off():
     if Log_state==True:
         b=math.log(Time_inp[0]/Time_inp[1])/(Time_inp[0]-Time_inp[1])
         a=Time_inp[0]/math.exp(b*Time_inp[0])
-    f_Time=interp1d(Time_l, Time_inp)
+    f_Time=interp1d(Time_l, Time_inp,fill_value='extrapolate')
     my_label.bind('<Button-1>',nullf)
 
 
@@ -251,8 +252,11 @@ def rightclick_MsTemp(event):
 def Get_data_MsTemp():
     global Ms_Temp_inp
     # input_2= int(Ms_Temp2.get()) if Ms_Temp2.get()!=Nan else 
-    print('Fail') if Ms_Temp2.get()=='' else print('s')
-    Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': int(Ms_Temp2.get())}
+    # print('Fail') if Ms_Temp2.get()=='' else print('s')
+    if Ms_Temp2.get()=='':
+        Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': ''}
+    else:
+        Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': int(Ms_Temp2.get())}
 
 
 def MsTempreg_on():
@@ -541,6 +545,26 @@ Add_Elements_Button = Button(Composition_Frame, text='Add Element', command=Add_
 Add_Elements_Button.grid(row=3, column=1)
 
 ##########################PHASE FRACTIONS################################################################################################3
+#######Button for combined total fractions of ferrite and pearlite
+
+Fraction_log=Label(Phasefraction_Frame, text='Are Pearlite and ferrite lines together?', font='TkDefaultFont 9 bold', fg='blue')
+Fraction_log.grid(row=3,column=0,padx=10, pady=10)
+
+def Log_on():
+    global Log_state_1
+    Log_state_1=TRUE
+
+def Log_off():
+    global Log_state_1
+    Log_state_1=FALSE
+
+
+Yes_button=Button(Phasefraction_Frame, text='     Yes     ', command=Log_on)
+Yes_button.grid(row=3, column=1)
+
+No_button=Button(Phasefraction_Frame, text='     No     ', command=Log_off)
+No_button.grid(row=3, column=2)
+
 
 ##### FERRITE PF
 
@@ -704,7 +728,7 @@ Bain3_button.grid(row=2, column=4)
 #####################EXITS###########################################################################################################################
 
 button_quit=Button(Phasefraction_Frame, text='Exit', command=root.quit)
-button_quit.grid(row=3,column=0)
+button_quit.grid(row=4,column=0)
 
 #####################IMAGE PROCESSING#####################################################################################################################
 
@@ -767,11 +791,12 @@ root.mainloop()
 
 global newjsonfile
 
-Phase_Data_dict = {'Phase Data': {'Ferrite:': Ferr_data,'Pearlite:': Pear_data, 'Bainite:': Bain_data}}
+Phase_Data_dict = {'Phase Data': {'Ferrite:': Ferr_data,'Pearlite:': Pear_data, 'Bainite:': Bain_data},'Status':Log_state_1}
 Critical_Temp_dict = {'Critical Temp Data': {'Ms_Temp:': Ms_Temp_inp, 'Ac Temp:': Ac_Temp_inp}}
 Comp_dict = {'Composition Data:': Element_data}
 Aus_dict = {'Austenitization Data:': {'Aus_Temp:': Aus_Temp_inp, 'Aus_Time:': Aus_Time_inp}}
 Grain_dict = {'Grain Size Data:': {'Grain Size:': Grain_S_data}}
+
 Data_dict = {**Phase_Data_dict, **Critical_Temp_dict, **Comp_dict, **Aus_dict, **Grain_dict}
 Main_json = json.dumps(Data_dict, indent=4)
 try:

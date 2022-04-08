@@ -1,0 +1,54 @@
+{
+    "Phase Data": {
+        "Ferrite:": {
+            "1": {
+                "Time": [
+                    6.929965467476055,
+                    10.181995439284004,
+                    16.079269654870245,
+                    37.759262105745975,
+                    114.14088965256647,
+                    226.5120881929428
+                ],
+                "Temperature": [
+                    640.3614457831325,
+                    663.7048192771084,
+                    687.8012048192771,
+                    710.3915662650602,
+                    731.4759036144578,
+                    738.2530120481928
+                ]
+            }
+        },
+        "Pearlite:": {},
+        "Bainite:": {}
+    },
+    "Critical Temp Data": {
+        "Ms_Temp:": {
+            "Ms:": 270,
+            "Mf:": 200
+        },
+        "Ac Temp:": {
+            "Ac1:": 740,
+            "Ac3:": 650
+        }
+    },
+    "Composition Data:": {
+        "C": 0.4,
+        "Mn": 0.8,
+        "Cr": 0.2
+    },
+    "Austenitization Data:": {
+        "Aus_Temp:": {
+            "Austenitization Temp:": 790.0
+        },
+        "Aus_Time:": {
+            "Austenitization Time:": 300.0
+        }
+    },
+    "Grain Size Data:": {
+        "Grain Size:": {
+            "Grain Size:": 50.0
+        }
+    }
+}
