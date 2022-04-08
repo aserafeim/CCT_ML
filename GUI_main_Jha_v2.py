@@ -120,8 +120,9 @@ Aus_Temp_l=[]
 Ms_Temp_inp = {}
 Ac_Temp_inp = {}
 Grain_S_data = {}
-Carbon_data = {}
-Manganese_data = {}
+Element_data = {}
+# Carbon_data = {}
+# Manganese_data = {}
 Aus_Time_inp = {}
 Aus_Temp_inp = {}
 
@@ -352,6 +353,7 @@ Aus_Temp1.grid(row=0, column=1, columnspan=1, padx=10, pady=10)
 # Temperature buttons (Aus)
 
 Aus_Temp_button=Button(Composition_Frame, text='AusTempreg on', command=lambda: [AusTempreg_on(), Get_data_AusTemp()])
+
 Aus_Temp_button.grid(row=0, column=2)
 
 Aus_Temp_button2=Button(Composition_Frame, text='AusTempreg off', command=AusTempreg_off)
@@ -390,98 +392,153 @@ Grain_Size_button=Button(Composition_Frame, text='Register', command=lambda: Get
 Grain_Size_button.grid(row=2, column=2)
 
 #### COMPOSITION
-def Get_data_Carbon():
-    global Carbon_data
-    Carbon_data = {'Carbon(wt%):': float(Carbon_Comp_Entry.get())}
 
-def Get_data_Manganese():
-    global Manganese_data
-    Manganese_data = {'Manganese(wt%):': float(Mn_Comp_Entry.get())}
+# def Get_data_Carbon():
+#     global Carbon_data
+#     Carbon_data = {'Carbon(wt%):': float(Carbon_Comp_Entry.get())}
+#
+# def Get_data_Manganese():
+#     global Manganese_data
+#     Manganese_data = {'Manganese(wt%):': float(Mn_Comp_Entry.get())}
+#
+# def Get_data_Silicon():
+#     pass
+#
+# def Get_data_Sulphur():
+#     pass
 
-def Get_data_Silicon():
-    pass
-
-def Get_data_Sulphur():
-    pass
 Comp_Label = Label(Composition_Frame, text='Composition: ', font='TkDefaultFont 9 bold', fg='dark blue')
 Comp_Label.grid(row=3, column=0, padx=10, pady=10)
 
-x = 8
+# x = 8
+# y = 0
+#
+# def Add_Elements():
+#     global x
+#     global y
+#
+#     if y > 3:
+#         x = x+2
+#         y = 0
+#
+#     element_label = Label(Composition_Frame, text=clicked.get() + '(wt%)', font='TkDefaultFont 9 bold', fg='blue')
+#     element_label.grid(row=x, column=y, padx=10, pady=10)
+#
+#     element_entry = Entry(Composition_Frame, width=10, borderwidth=5)
+#     element_entry.grid(row=x, column=y+1, columnspan=1, padx=10, pady=10)
+#
+#     y = y+2
+#
+# options = [
+#     'Phosphorus',
+#     'Chromium',
+#     'Molybdenum',
+#     'Vanadium',
+#     'Nickel',
+#     'Copper',
+#     'Aluminum',
+#     'Titanium'
+# ]
+#
+# clicked = StringVar()
+# clicked.set('Choose Element')
+#
+# drop = OptionMenu(Composition_Frame, clicked, *options)
+# drop.grid(row=3, column=1)
+#
+# Add_Elements_Button = Button(Composition_Frame, text='Add Element', command=Add_Elements)
+# Add_Elements_Button.grid(row=3, column=2)
+#
+# Carbon_Comp_Label = Label(Composition_Frame, text='Carbon (wt%)', font='TkDefaultFont 9 bold', fg='blue')
+# Carbon_Comp_Label.grid(row=4, column=0, padx=10, pady=10)
+#
+# Carbon_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
+# Carbon_Comp_Entry.grid(row=4, column=1, columnspan=1, padx=10, pady=10)
+#
+# Mn_Comp_Label = Label(Composition_Frame, text='Manganese (wt%)', font='TkDefaultFont 9 bold', fg='blue')
+# Mn_Comp_Label.grid(row=4, column=2, padx=10, pady=10)
+#
+# Mn_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
+# Mn_Comp_Entry.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
+#
+# Carbon_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Carbon())
+# Carbon_Comp_button.grid(row=5, column=0)
+#
+# Manganese_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Manganese())
+# Manganese_Comp_button.grid(row=5, column=2)
+#
+# Si_Comp_Label = Label(Composition_Frame, text='Silicon (wt%)', font='TkDefaultFont 9 bold', fg='blue')
+# Si_Comp_Label.grid(row=6, column=0, padx=10, pady=10)
+#
+# Si_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
+# Si_Comp_Entry.grid(row=6, column=1, columnspan=1, padx=10, pady=10)
+#
+# S_Comp_Label = Label(Composition_Frame, text='Sulphur (wt%)', font='TkDefaultFont 9 bold', fg='blue')
+# S_Comp_Label.grid(row=6, column=2, padx=10, pady=10)
+#
+# S_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
+# S_Comp_Entry.grid(row=6, column=3, columnspan=1, padx=10, pady=10)
+#
+# Silicon_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Silicon())
+# Silicon_Comp_button.grid(row=7, column=0)
+#
+# Sulphur_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Sulphur())
+# Sulphur_Comp_button.grid(row=7, column=2)
+
+x = 4
 y = 0
 
-def Add_Elements():
+sv = StringVar()
+
+def Get_data():
+    pass
+    global Element_data
+    Element_data[create_label['text']] = float(create_entry.get())
+
+def Create_Widgets():
+    pop.destroy()
     global x
     global y
+    global create_entry
+    global create_label
 
     if y > 3:
         x = x+2
         y = 0
 
-    element_label = Label(Composition_Frame, text=clicked.get() + '(wt%)', font='TkDefaultFont 9 bold', fg='blue')
-    element_label.grid(row=x, column=y, padx=10, pady=10)
+    create_label = Label(Composition_Frame, text=sv.get(), font='TkDefaultFont 9 bold', fg='blue')
+    create_label.grid(row=x, column=y, padx=10, pady=10)
 
-    element_entry = Entry(Composition_Frame, width=10, borderwidth=5)
-    element_entry.grid(row=x, column=y+1, columnspan=1, padx=10, pady=10)
-    
+    create_entry = Entry(Composition_Frame, width=10, borderwidth=5)
+    create_entry.grid(row=x, column=y+1, columnspan=1, padx=10, pady=10)
+
+    create_button = Button(Composition_Frame, text='Register', command=lambda: Get_data())
+    create_button.grid(row=x+1, column=y, pady=10)
+
     y = y+2
 
-options = [
-    'Phosphorus',
-    'Chromium',
-    'Molybdenum',
-    'Vanadium',
-    'Nickel',
-    'Copper',
-    'Aluminum',
-    'Titanium'
-]
+def Add_Element():
 
-clicked = StringVar()
-clicked.set('Choose Element')
+    global pop
+    global element_entry
 
-drop = OptionMenu(Composition_Frame, clicked, *options)
-drop.grid(row=3, column=1)
 
-Add_Elements_Button = Button(Composition_Frame, text='Add Element', command=Add_Elements)
-Add_Elements_Button.grid(row=3, column=2)
+    pop = Toplevel(Composition_Frame)
+    pop.title('Add Element')
 
-Carbon_Comp_Label = Label(Composition_Frame, text='Carbon (wt%)', font='TkDefaultFont 9 bold', fg='blue')
-Carbon_Comp_Label.grid(row=4, column=0, padx=10, pady=10)
+    element_label = Label(pop, text='Add Element Name', font='TkDefaultFont 9 bold', fg='blue')
+    element_label.grid(row=0, column=0, padx=10, pady=10)
 
-Carbon_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
-Carbon_Comp_Entry.grid(row=4, column=1, columnspan=1, padx=10, pady=10)
+    element_entry = Entry(pop, textvariable=sv, width=10, borderwidth=5)
+    element_entry.grid(row=0, column=2, columnspan=1, padx=10, pady=10)
 
-Mn_Comp_Label = Label(Composition_Frame, text='Manganese (wt%)', font='TkDefaultFont 9 bold', fg='blue')
-Mn_Comp_Label.grid(row=4, column=2, padx=10, pady=10)
+    element_button = Button(pop, text='Register', command=Create_Widgets)
+    element_button.grid(row=1, column=1, padx=10, pady=10)
 
-Mn_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
-Mn_Comp_Entry.grid(row=4, column=3, columnspan=1, padx=10, pady=10)
+Add_Elements_Button = Button(Composition_Frame, text='Add Element', command=Add_Element)
+Add_Elements_Button.grid(row=3, column=1)
 
-Carbon_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Carbon())
-Carbon_Comp_button.grid(row=5, column=0)
-
-Manganese_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Manganese())
-Manganese_Comp_button.grid(row=5, column=2)
-
-Si_Comp_Label = Label(Composition_Frame, text='Silicon (wt%)', font='TkDefaultFont 9 bold', fg='blue')
-Si_Comp_Label.grid(row=6, column=0, padx=10, pady=10)
-
-Si_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
-Si_Comp_Entry.grid(row=6, column=1, columnspan=1, padx=10, pady=10)
-
-S_Comp_Label = Label(Composition_Frame, text='Sulphur (wt%)', font='TkDefaultFont 9 bold', fg='blue')
-S_Comp_Label.grid(row=6, column=2, padx=10, pady=10)
-
-S_Comp_Entry = Entry(Composition_Frame, width=10, borderwidth=5)
-S_Comp_Entry.grid(row=6, column=3, columnspan=1, padx=10, pady=10)
-
-Silicon_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Silicon())
-Silicon_Comp_button.grid(row=7, column=0)
-
-Sulphur_Comp_button=Button(Composition_Frame, text='Register', command=lambda: Get_data_Sulphur())
-Sulphur_Comp_button.grid(row=7, column=2)
-
-##########################PHASE FRACTIONS###############################
+##########################PHASE FRACTIONS################################################################################################3
 
 ##### FERRITE PF
 
@@ -537,7 +594,7 @@ Ferr2_button.grid(row=0, column=3)
 Ferr3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lambda : Calc_and_reset(Ferr_l_t, Ferr_l_T, Ferr_inp, f_Temp, f_Time))
 Ferr3_button.grid(row=0, column=4)
 
-##### PEARLITE PF
+################################# PEARLITE PF
 
 def leftclick_Pear(event):
     global Pear_l_T
@@ -568,15 +625,17 @@ def Calc_and_reset_Pear(time,temp,fraction,f_Temp,f_Time):
     Pear_l_T=[]
     Pear_l_t=[]
 
-# Label
+################################# Label
+
 Pearlite=Label(Phasefraction_Frame, text='Pearlite fractions', font='TkDefaultFont 9 bold', fg='blue')
 Pearlite.grid(row=1,column=0,padx=10, pady=10)
 
-# Fraction insert box
+########################## Fraction insert box
+
 Pearlite_frac= Entry(Phasefraction_Frame, width=10, borderwidth=5)
 Pearlite_frac.grid(row=1, column=1, columnspan=1, padx=10, pady=10)
 
-# Buttons
+######################### Buttons
 
 Pear1_button=Button(Phasefraction_Frame, text='Pear_reg on', command=lambda: [Pear_reg_on(), Get_data_Pear()])
 Pear1_button.grid(row=1, column=2)
@@ -587,7 +646,7 @@ Pear2_button.grid(row=1, column=3)
 Pear3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lambda : Calc_and_reset_Pear(Pear_l_t, Pear_l_T, Pear_inp, f_Temp, f_Time))
 Pear3_button.grid(row=1, column=4)
 
-##### BAINITE PF
+############################################## BAINITE PF
 
 def leftclick_Bain(event):
     global Bain_l_T
@@ -618,15 +677,17 @@ def Calc_and_reset_Bain(time,temp,fraction,f_Temp,f_Time):
     Bain_l_T=[]
     Bain_l_t=[]
 
-# Label
+#######################  Label
+
 Bainite=Label(Phasefraction_Frame, text='Bainite fractions', font='TkDefaultFont 9 bold', fg='blue')
 Bainite.grid(row=2,column=0,padx=10, pady=10)
 
-# Fraction insert box
+####################### Fraction insert box
+
 Bainite_frac= Entry(Phasefraction_Frame, width=10, borderwidth=5)
 Bainite_frac.grid(row=2, column=1, columnspan=1, padx=10, pady=10)
 
-# Buttons
+###################### Buttons
 
 Bain1_button=Button(Phasefraction_Frame, text='Bain_reg on', command=lambda: [Bain_reg_on(), Get_data_Bain()])
 Bain1_button.grid(row=2, column=2)
@@ -638,12 +699,12 @@ Bain3_button=Button(Phasefraction_Frame, text='Calculate and reset', command=lam
 Bain3_button.grid(row=2, column=4)
 
 
-#####################EXITS###########################
+#####################EXITS###########################################################################################################################
 
 button_quit=Button(Phasefraction_Frame, text='Exit', command=root.quit)
 button_quit.grid(row=3,column=0)
 
-#####################IMAGE PROCESSING###############################
+#####################IMAGE PROCESSING#####################################################################################################################
 
 top = Toplevel()
 top.title('IMAGE')
@@ -701,14 +762,19 @@ imagebutton.grid(row=0, column=0, pady=10)
 root.mainloop()
 
 ###############################POST_PROCESSING#######################################################
+
 global newjsonfile
 
 Phase_Data_dict = {'Phase Data': {'Ferrite:': Ferr_data,'Pearlite:': Pear_data, 'Bainite:': Bain_data}}
 Critical_Temp_dict = {'Critical Temp Data': {'Ms_Temp:': Ms_Temp_inp, 'Ac Temp:': Ac_Temp_inp}}
-Comp_dict = {'Composition Data:': {'Carbon data:': Carbon_data, 'Manganese data:': Manganese_data}}
+Comp_dict = {'Composition Data:': Element_data}
 Aus_dict = {'Austenitization Data:': {'Aus_Temp:': Aus_Temp_inp, 'Aus_Time:': Aus_Time_inp}}
 Grain_dict = {'Grain Size Data:': {'Grain Size:': Grain_S_data}}
 Data_dict = {**Phase_Data_dict, **Critical_Temp_dict, **Comp_dict, **Aus_dict, **Grain_dict}
 Main_json = json.dumps(Data_dict, indent=4)
-newjsonfile.write(Main_json)
-newjsonfile.close()
+try:
+    newjsonfile.write(Main_json)
+    newjsonfile.close()
+except:
+    print('NO IMAGE FILE CHOSEN')
+
