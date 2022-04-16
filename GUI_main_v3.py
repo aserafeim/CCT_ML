@@ -791,13 +791,13 @@ root.mainloop()
 
 global newjsonfile
 
-Phase_Data_dict = {'Phase Data': {'Ferrite:': Ferr_data,'Pearlite:': Pear_data, 'Bainite:': Bain_data},'Status':Log_state_1}
-Critical_Temp_dict = {'Critical Temp Data': {'Ms_Temp:': Ms_Temp_inp, 'Ac Temp:': Ac_Temp_inp}}
-Comp_dict = {'Composition Data:': Element_data}
-Aus_dict = {'Austenitization Data:': {'Aus_Temp:': Aus_Temp_inp, 'Aus_Time:': Aus_Time_inp}}
-Grain_dict = {'Grain Size Data:': {'Grain Size:': Grain_S_data}}
+Phase_Data_dict = {'Ferrite': Ferr_data,'Pearlite': Pear_data, 'Bainite': Bain_data}
+Critical_Temp_dict = {'Critical Temp Data': {'Ms_Temp': Ms_Temp_inp, 'Ac Temp': Ac_Temp_inp}}
+Comp_dict = {'Composition Data': Element_data}
+Aus_dict = {'Austenitization Data': {'Aus_Temp': Aus_Temp_inp, 'Aus_Time': Aus_Time_inp}}
+Grain_dict = {'Grain Size Data': {'Grain Size': Grain_S_data}}
 
-Data_dict = {**Phase_Data_dict, **Critical_Temp_dict, **Comp_dict, **Aus_dict, **Grain_dict}
+Data_dict = {**Phase_Data_dict, **Ms_Temp_inp, **Ac_Temp_inp, **Aus_Temp_inp, **Aus_Time_inp,**Grain_S_data,'Status':Log_state_1}
 Main_json = json.dumps(Data_dict, indent=4)
 try:
     newjsonfile.write(Main_json)
