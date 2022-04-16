@@ -141,7 +141,7 @@ def Test_1(f,inp):
 def rightclick_Temp(event):
     
     Temp_l.append(event.y)
-    print('Left')
+    print(event.y)
     return Temp_l
 
 def Get_data_Temp():
@@ -200,7 +200,7 @@ No_button.grid(row=1, column=2)
 
 def rightclick_Time(event):
     Time_l.append(event.x)
-    print('Left')
+    print(event.x)
     return Time_l
 
 def Get_data_Time():
@@ -255,8 +255,10 @@ def Get_data_MsTemp():
     # print('Fail') if Ms_Temp2.get()=='' else print('s')
     if Ms_Temp2.get()=='':
         Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': ''}
+        print(Ms_Temp_inp)
     else:
         Ms_Temp_inp = {'Ms:': int(Ms_Temp1.get()), 'Mf:': int(Ms_Temp2.get())}
+        print(Ms_Temp_inp)
 
 
 def MsTempreg_on():
@@ -295,7 +297,18 @@ def rightclick_AcTemp(event):
 
 def Get_data_AcTemp():
     global Ac_Temp_inp
-    Ac_Temp_inp = {'Ac1:': int(Ac_Temp1.get()), 'Ac3:': int(Ac_Temp2.get())}
+    if Ac_Temp2.get()=='':
+        Ac_Temp_inp = {'Ac1:': int(Ac_Temp1.get()), 'Ac3:': ''}
+        print(Ac_Temp_inp)
+    elif Ac_Temp1.get()=='' and Ac_Temp2.get()=='':
+        Ac_Temp_inp = {'Ac1:': '', 'Ac3:': ''}
+        print(Ac_Temp_inp)
+    elif Ac_Temp1.get()=='':
+        Ac_Temp_inp = {'Ac1:': '', 'Ac3:': int(Ac_Temp2.get())}
+        print(Ac_Temp_inp)
+    else:
+        Ac_Temp_inp = {'Ac1:': int(Ac_Temp1.get()), 'Ac3:': int(Ac_Temp2.get())}
+        print(Ac_Temp_inp)
 
 
 def AcTempreg_on():
@@ -339,6 +352,7 @@ def rightclick_AusTemp(event):
 def Get_data_AusTemp():
     global Aus_Temp_inp
     Aus_Temp_inp = {'Austenitization Temp:': float(Aus_Temp1.get())}
+    print(Aus_Temp_inp)
 
 def AusTempreg_on():
     my_label.bind('<Button-1>', rightclick_AusTemp)
@@ -371,6 +385,7 @@ Aus_Temp_button2.grid(row=0, column=3)
 def Get_data_AusTime():
     global Aus_Time_inp
     Aus_Time_inp = {'Austenitization Time:': float(Aus_Time1.get())}
+    
 
 
 Aus_Time = Label(Composition_Frame, text='Aus Time', font='TkDefaultFont 9 bold', fg='blue')
@@ -387,6 +402,7 @@ Aus_Time_button.grid(row=1, column=2)
 def Get_data_GS():
     global Grain_S_data
     Grain_S_data = {'Grain Size:': float(Grain_Size1.get())}
+    print(Grain_Size1.get())
 
 Grain_Size = Label(Composition_Frame, text='Grain Size', font='TkDefaultFont 9 bold', fg='blue')
 Grain_Size.grid(row=2, column=0,padx=10, pady=10)
@@ -574,7 +590,7 @@ def leftclick_Ferr(event):
     global Ferr_l_t
     Ferr_l_t.append(event.x)
     Ferr_l_T.append(event.y)
-    print('Left')
+    print(Test_1(f_Time,event.x),f_Temp(event.y))
     # return Ferr_l_t,Ferr_l_T
 
 def Get_data_Ferr():
@@ -627,7 +643,7 @@ def leftclick_Pear(event):
     global Pear_l_t
     Pear_l_t.append(event.x)
     Pear_l_T.append(event.y)
-    print('Left')
+    print(Test_1(f_Time,event.x),f_Temp(event.y))
     # return Ferr_l_t,Ferr_l_T
 
 def Get_data_Pear():
@@ -679,7 +695,7 @@ def leftclick_Bain(event):
     global Bain_l_t
     Bain_l_t.append(event.x)
     Bain_l_T.append(event.y)
-    print('Left')
+    print(Test_1(f_Time,event.x),f_Temp(event.y))
     # return Ferr_l_t,Ferr_l_T
 
 def Get_data_Bain():
