@@ -813,7 +813,7 @@ Comp_dict = {'Composition Data': Element_data}
 Aus_dict = {'Austenitization Data': {'Aus_Temp': Aus_Temp_inp, 'Aus_Time': Aus_Time_inp}}
 Grain_dict = {'Grain Size Data': {'Grain Size': Grain_S_data}}
 
-Data_dict = {**Phase_Data_dict, **Ms_Temp_inp, **Ac_Temp_inp, **Aus_Temp_inp, **Aus_Time_inp,**Grain_S_data,'Status':Log_state_1}
+Data_dict = {**Phase_Data_dict,**Element_data, **Ms_Temp_inp, **Ac_Temp_inp, **Aus_Temp_inp, **Aus_Time_inp,**Grain_S_data,'Status':Log_state_1}
 Main_json = json.dumps(Data_dict, indent=4)
 try:
     newjsonfile.write(Main_json)
