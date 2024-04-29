@@ -1,0 +1,238 @@
+[Parameter]
+Version=9.0
+ZTUType=ZTU
+ZTUName=TRIP_1_Ind_Konz_Proz
+Adresse=Institut für Eisenhüttenkunde der RWTH Aachen
+Benutzername=
+nxh_Flag=1
+nyh_Flag=1
+PolyAnzahl=12
+StrichStaerke=0
+StrichType=0
+xh_max=4.950000
+xn_max=-1.010000
+yh_max=990.000000
+ynn_max=10.000000
+ax=7
+ay=11
+px1=-1.000000
+px2=5.000000
+py1=0.000000
+py2=1000.000000
+Datum=17.03.15
+UDatum=18033
+[Kurven]
+AktAnzahl=4
+Kurve1=TRIP1_Tiso_375
+KurveKomplett1=M:\Anlagen-R301\Dilatometer805Baehr\MESSDATEN_dilALT\ZTU\ZTU\isoZTU_TRIP_1_Ind_Konz\ZTU\TRIP1_Tiso_375.BPA
+Kurve2=TRIP1_Tiso_400
+KurveKomplett2=M:\Anlagen-R301\Dilatometer805Baehr\MESSDATEN_dilALT\ZTU\ZTU\isoZTU_TRIP_1_Ind_Konz\AR\TRIP1_Tiso_400.BPA
+Kurve3=TRIP1_Tiso_425
+KurveKomplett3=M:\Anlagen-R301\Dilatometer805Baehr\MESSDATEN_dilALT\ZTU\ZTU\isoZTU_TRIP_1_Ind_Konz\AR\TRIP1_Tiso_425.BPA
+Kurve4=TRIP1_Tiso_450
+KurveKomplett4=M:\Anlagen-R301\Dilatometer805Baehr\MESSDATEN_dilALT\ZTU\ZTU\isoZTU_TRIP_1_Ind_Konz\AR\TRIP1_Tiso_450.BPA
+Zeigen=0
+[Ac1]
+Zeigen=1
+[Ac3]
+Zeigen=1
+[Ac1b]
+Zeigen=1
+[Ac1e]
+Zeigen=1
+[Accm]
+Zeigen=1
+[Acc]
+Zeigen=1
+[Upc1]
+Zeigen=1
+[Upc2]
+Zeigen=1
+[Upc3]
+Zeigen=1
+[Upc4]
+Zeigen=1
+[Upc5]
+Zeigen=1
+[Upc6]
+Zeigen=1
+[Ar1]
+Zeigen=1
+[Ar3]
+Zeigen=1
+[Ar1b]
+Zeigen=1
+[Ar1e]
+Zeigen=1
+[Arcm]
+Zeigen=1
+[Arc]
+Zeigen=1
+[Ms]
+Zeigen=1
+[Mf]
+Zeigen=1
+[Upr1]
+Zeigen=1
+[Upr2]
+Zeigen=1
+[Upr3]
+Zeigen=1
+[Upr4]
+Zeigen=1
+[Upr5]
+Zeigen=1
+[Upr6]
+Zeigen=1
+[HaerteGrad]
+Zeigen=1
+[Lambda]
+Zeigen=1
+[Polygon]
+Zeigen=1
+[VerLaengerung]
+Zeigen=1
+[Raster]
+Zeigen=1
+[FreiePunkte]
+Zeigen=1
+Anzahl=12
+Eintrag1=2.32815$ 373.829$
+WKRect1=2.30593$ 378.971$ 2.35037$ 368.686$
+Eintrag2=2.46889$ 398.857$
+WKRect2=2.44667$ 404$ 2.49111$ 393.714$
+Eintrag3=2.74444$ 423.771$
+WKRect3=2.72222$ 428.914$ 2.76667$ 418.629$
+Eintrag4=2.45926$ 373.829$
+WKRect4=2.43704$ 378.971$ 2.48148$ 368.686$
+Eintrag5=2.61852$ 398.857$
+WKRect5=2.5963$ 404$ 2.64074$ 393.714$
+Eintrag6=2.88963$ 424.914$
+WKRect6=2.86741$ 430.057$ 2.91185$ 419.771$
+Eintrag7=2.59481$ 373.829$
+WKRect7=2.57259$ 378.971$ 2.61704$ 368.686$
+Eintrag8=2.76815$ 399.886$
+WKRect8=2.74593$ 405.029$ 2.79037$ 394.743$
+Eintrag9=3.09037$ 424.914$
+WKRect9=3.06815$ 430.057$ 3.11259$ 419.771$
+Eintrag10=2.81481$ 373.829$
+WKRect10=2.79259$ 378.971$ 2.83704$ 368.686$
+Eintrag11=3.00222$ 398.857$
+WKRect11=2.98$ 404$ 3.02444$ 393.714$
+Eintrag12=3.32889$ 423.771$
+WKRect12=3.30667$ 428.914$ 3.35111$ 418.629$
+[Grenzen]
+an1=2501
+en1=6958
+an2=2527
+en2=6935
+an3=1424
+en3=4096
+an4=1462
+en4=7315
+[HaerteFont]
+Farbe=0
+LogFont=-12$0$0$0$300$0$0$0$0$4$32$0$18$Arial$
+[LambdaFont]
+Farbe=0
+LogFont=0$0$0$0$300$0$0$0$0$4$32$0$18$Arial$
+[TextEintrag]
+Anzahl=9
+Eintrag1=2.14148$ 426.166$ 1$ 0$ 0$ 0$
+Text1_1=B$
+Farbe1=0
+LogFont1=-19$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag2=-0.954074$ 417.52$ 1$ 0$ 0$ 0$
+Text2_1=Ms$
+Farbe2=0
+LogFont2=-16$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag3=3.15185$ 382.935$ 1$ 0$ 0$ 0$
+Text3_1=97$
+Farbe3=0
+LogFont3=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag4=3.24$ 408.874$ 1$ 0$ 0$ 0$
+Text4_1=82$
+Farbe4=0
+LogFont4=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag5=3.52593$ 433.788$ 1$ 0$ 0$ 0$
+Text5_1=62$
+Farbe5=0
+LogFont5=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag6=2.26741$ 365.143$ 1$ 0$ 0$ 0$
+Text6_1=30$
+Farbe6=8421504
+LogFont6=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag7=2.40815$ 364$ 1$ 0$ 0$ 0$
+Text7_1=50$
+Farbe7=8421504
+LogFont7=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag8=2.5437$ 365.143$ 1$ 0$ 0$ 0$
+Text8_1=70$
+Farbe8=8421504
+LogFont8=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag9=2.74963$ 365.143$ 1$ 0$ 0$ 0$
+Text9_1=90$
+Farbe9=8421504
+LogFont9=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+[ACAusFormBlatt]
+AC1=705.0
+AC3=855.0
+MS=390.0
+AC1B=-1000.0
+AC1E=-1000.0
+[ZTU-Parameter]
+Ueberschr=Zeit - Temperatur - Umwandlungsschaubild
+Nr=
+sWerksbez=TRIP 1 Ind.-Konzep
+Kurzname=
+SchmelzeNr=
+AbmessW=
+AbmessP=1,3 x 4,0 x 7
+Ort=
+Lage=
+Vorbehandl=
+WDauer=285
+Temp=950
+Haltedauer=300
+AC1=705
+AC3=855
+Ms=390
+Korngroesse=
+KornNach=
+Schmelze=0
+Stueck=0
+AC1B=-----
+AC1E=-----
+ZTUArt=1
+[Elemente]
+Element0=C
+Element1=Si
+Element2=Mn
+Element3=P
+Element4=S
+Element5=Cr
+Element6=Mo
+Element7=Ni
+Element8=Al
+Element9=Cu
+Element10=Ti
+Element11=N
+Element12=B
+Element13=
+Element14=
+[Massen]
+Masse0=0,183
+Masse1=0,970
+Masse2=2,392
+Masse3=0,012
+Masse4=0,018
+Masse5=0,249
+Masse6=0,090
+Masse7=0,190
+Masse8=0,020
+Masse9=0,211
+Masse10=0,033
+Masse11=0,0084
+Masse12=0,0018
+Masse13=
+Masse14=

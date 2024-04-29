@@ -1,0 +1,388 @@
+[Parameter]
+Version=9.0
+ZTUType=ZTU
+ZTUName=kontZTU_Mat_DP980wei
+Adresse=Institut für Eisenhüttenkunde der RWTH Aachen
+Benutzername=
+nxh_Flag=1
+nyh_Flag=1
+xh_max=3.960000
+xn_max=-1.010000
+yh_max=891.000000
+ynn_max=9.000000
+ax=6
+ay=10
+px1=-1.000000
+px2=4.000000
+py1=0.000000
+py2=900.000000
+Datum=10.12.14
+UDatum=17800
+PolyAnzahl=27
+StrichStaerke=0
+StrichType=0
+[Kurven]
+AktAnzahl=11
+Kurve1=DP980wei_tk_2h
+KurveKomplett1=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_2h.BPA
+Kurve2=DP980wei_tk_1h
+KurveKomplett2=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_1h.BPA
+Kurve3=DP980wei_tk_30m
+KurveKomplett3=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_30m.BPA
+Kurve4=DP980wei_tk_15m
+KurveKomplett4=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_15m.BPA
+Kurve5=DP980wei_tk_8m
+KurveKomplett5=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_8m.BPA
+Kurve6=DP980wei_tk_4m
+KurveKomplett6=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_4m.BPA
+Kurve7=DP980wei_tk_2m
+KurveKomplett7=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_2m.BPA
+Kurve8=DP980wei_HE_max
+KurveKomplett8=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_HE_max.BPA
+Kurve9=DP980wei_AR_max
+KurveKomplett9=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_AR_max.BPA
+Kurve10=DP980wei_AR_2p
+KurveKomplett10=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_AR_2p.BPA
+Kurve11=DP980wei_tk_1m
+KurveKomplett11=M:\Anlagen-R301\Dilatometer805Baehr\_ZTU_AUSWERTUNG\ZTU\kontZTU_Mat_DP980\AR\DP980wei_tk_1m.BPA
+Zeigen=1
+[ACAusFormBlatt]
+AC1=700.0
+AC3=850.0
+MS=400.0
+AC1B=-1000.0
+AC1E=-1000.0
+[Ac1]
+Zeigen=1
+[Ac3]
+Zeigen=1
+[Ac1b]
+Zeigen=1
+[Ac1e]
+Zeigen=1
+[Accm]
+Zeigen=1
+[Acc]
+Zeigen=1
+[Upc1]
+Zeigen=1
+[Upc2]
+Zeigen=1
+[Upc3]
+Zeigen=1
+[Upc4]
+Zeigen=1
+[Upc5]
+Zeigen=1
+[Upc6]
+Zeigen=1
+[Ar1]
+Zeigen=1
+[Ar3]
+Zeigen=1
+[Ar1b]
+Zeigen=1
+[Ar1e]
+Zeigen=1
+[Arcm]
+Zeigen=1
+[Arc]
+Zeigen=1
+[Ms]
+Zeigen=1
+[Mf]
+Zeigen=1
+[Upr1]
+Zeigen=1
+[Upr2]
+Zeigen=1
+[Upr3]
+Zeigen=1
+[Upr4]
+Zeigen=1
+[Upr5]
+Zeigen=1
+[Upr6]
+Zeigen=1
+[HaerteGrad]
+Zeigen=1
+[Lambda]
+Zeigen=1
+[Polygon]
+Zeigen=1
+[VerLaengerung]
+Zeigen=1
+[Raster]
+Zeigen=1
+[FreiePunkte]
+Zeigen=1
+Anzahl=0
+[Grenzen]
+an1=1951
+en1=7185
+an2=1951
+en2=7279
+an3=1951
+en3=7282
+an4=1952
+en4=7275
+an5=1952
+en5=7439
+an6=1954
+en6=7277
+an7=1958
+en7=7276
+an8=1992
+en8=3108
+an9=1972
+en9=3727
+an10=1962
+en10=4221
+an11=1966
+en11=7354
+[HaerteEintrag]
+Vorhanden1=1
+Anzahl1=1
+Text1=11
+Vorhanden2=1
+Anzahl2=1
+Text2=10
+Vorhanden3=1
+Anzahl3=1
+Text3=9
+Vorhanden4=1
+Anzahl4=1
+Text4=8
+Vorhanden5=1
+Anzahl5=1
+Text5=7
+Vorhanden6=1
+Anzahl6=1
+Text6=6
+Vorhanden7=1
+Anzahl7=1
+Text7=5
+Vorhanden8=1
+Anzahl8=1
+Text8=1
+Vorhanden9=1
+Anzahl9=1
+Text9=2
+Vorhanden10=1
+Anzahl10=1
+Text10=3
+Vorhanden11=1
+Anzahl11=1
+Text11=4
+[HaerteFont]
+Farbe=0
+LogFont=-16$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+[LambdaFont]
+Farbe=0
+LogFont=0$0$0$0$300$0$0$0$0$4$32$0$18$Arial$
+[TextEintrag]
+Anzahl=37
+Eintrag1=0.359259$ 338.477$ 1$ 0$ 0$ 0$
+Text1_1=M$
+Farbe1=0
+LogFont1=-19$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag2=1.0642$ 491.975$ 1$ 0$ 0$ 0$
+Text2_1=B$
+Farbe2=0
+LogFont2=-19$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag3=2.38951$ 572.222$ 1$ 0$ 0$ 0$
+Text3_1=P$
+Farbe3=0
+LogFont3=-19$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag4=1.71914$ 646.502$ 1$ 0$ 0$ 0$
+Text4_1=F$
+Farbe4=0
+LogFont4=-19$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag5=-0.973457$ 421.605$ 1$ 0$ 0$ 0$
+Text5_1=Ms$
+Farbe5=0
+LogFont5=-16$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag6=0.901852$ 634.738$ 1$ 0$ 0$ 0$
+Text6_1=1$
+Farbe6=0
+LogFont6=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag7=1.23395$ 611.614$ 1$ 0$ 0$ 0$
+Text7_1=5$
+Farbe7=0
+LogFont7=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag8=1.56975$ 581.809$ 1$ 0$ 0$ 0$
+Text8_1=70$
+Farbe8=0
+LogFont8=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag9=1.85123$ 597.225$ 1$ 0$ 0$ 0$
+Text9_1=77$
+Farbe9=0
+LogFont9=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag10=2.09444$ 611.614$ 1$ 0$ 0$ 0$
+Text10_1=81$
+Farbe10=0
+LogFont10=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag11=2.38765$ 611.614$ 1$ 0$ 0$ 0$
+Text11_1=81$
+Farbe11=0
+LogFont11=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag12=2.67654$ 611.614$ 1$ 0$ 0$ 0$
+Text12_1=80$
+Farbe12=0
+LogFont12=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag13=2.96975$ 614.491$ 1$ 0$ 0$ 0$
+Text13_1=75$
+Farbe13=0
+LogFont13=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag14=2.00926$ 555.807$ 1$ 0$ 0$ 0$
+Text14_1=3$
+Farbe14=0
+LogFont14=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag15=2.21358$ 553.854$ 1$ 0$ 0$ 0$
+Text15_1=5$
+Farbe15=0
+LogFont15=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag16=2.52654$ 550.976$ 1$ 0$ 0$ 0$
+Text16_1=9$
+Farbe16=0
+LogFont16=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag17=2.78889$ 552.929$ 1$ 0$ 0$ 0$
+Text17_1=16$
+Farbe17=0
+LogFont17=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag18=3.08951$ 550.976$ 1$ 0$ 0$ 0$
+Text18_1=25$
+Farbe18=0
+LogFont18=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag19=0.512346$ 418.191$ 1$ 0$ 0$ 0$
+Text19_1=2$
+Farbe19=0
+LogFont19=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag20=0.855556$ 419.116$ 1$ 0$ 0$ 0$
+Text20_1=35$
+Farbe20=0
+LogFont20=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag21=1.20679$ 420.144$ 1$ 0$ 0$ 0$
+Text21_1=54$
+Farbe21=0
+LogFont21=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag22=1.51173$ 420.144$ 1$ 0$ 0$ 0$
+Text22_1=61$
+Farbe22=0
+LogFont22=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag23=1.81235$ 418.191$ 1$ 0$ 0$ 0$
+Text23_1=10$
+Farbe23=0
+LogFont23=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag24=2.13642$ 419.116$ 1$ 0$ 0$ 0$
+Text24_1=4$
+Farbe24=0
+LogFont24=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag25=2.39877$ 418.191$ 1$ 0$ 0$ 0$
+Text25_1=2$
+Farbe25=0
+LogFont25=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag26=2.71173$ 418.191$ 1$ 0$ 0$ 0$
+Text26_1=2$
+Farbe26=0
+LogFont26=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag27=2.96235$ 465.365$ 1$ 0$ 0$ 0$
+Text27_1=1$
+Farbe27=0
+LogFont27=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag28=0.187654$ 270.062$ 1$ 0$ 0$ 0$
+Text28_1=100$
+Farbe28=0
+LogFont28=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag29=0.698148$ 269.033$ 1$ 0$ 0$ 0$
+Text29_1=98$
+Farbe29=0
+LogFont29=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag30=1.09198$ 269.033$ 1$ 0$ 0$ 0$
+Text30_1=65$
+Farbe30=0
+LogFont30=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag31=1.36852$ 298.354$ 1$ 0$ 0$ 0$
+Text31_1=45$
+Farbe31=0
+LogFont31=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag32=1.6179$ 331.584$ 1$ 0$ 0$ 0$
+Text32_1=34$
+Farbe32=0
+LogFont32=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag33=1.9216$ 341.358$ 1$ 0$ 0$ 0$
+Text33_1=20$
+Farbe33=0
+LogFont33=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag34=2.19877$ 352.16$ 1$ 0$ 0$ 0$
+Text34_1=16$
+Farbe34=0
+LogFont34=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag35=2.45988$ 363.889$ 1$ 0$ 0$ 0$
+Text35_1=12$
+Farbe35=0
+LogFont35=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag36=2.76358$ 376.646$ 1$ 0$ 0$ 0$
+Text36_1=8$
+Farbe36=0
+LogFont36=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+Eintrag37=3.02469$ 404.012$ 1$ 0$ 0$ 0$
+Text37_1=3$
+Farbe37=0
+LogFont37=-13$0$0$0$700$0$0$0$0$3$2$1$34$Arial$
+[ZTU-Parameter]
+Ueberschr=Zeit - Temperatur - Umwandlungsschaubild
+Nr=
+sWerksbez=DP 980 wei
+Kurzname=
+SchmelzeNr=
+AbmessW=
+AbmessP=1,3 x 4,0 x 7
+Ort=
+Lage=
+Vorbehandl=
+WDauer=270
+Temp=900
+Haltedauer=600
+AC1=700
+AC3=850
+Ms=400
+Korngroesse=
+KornNach=
+Schmelze=0
+Stueck=0
+AC1B=-----
+AC1E=-----
+ZTUArt=2
+[Elemente]
+Element0=
+Element1=
+Element2=
+Element3=
+Element4=
+Element5=
+Element6=
+Element7=
+Element8=
+Element9=
+Element10=
+Element11=
+Element12=
+Element13=
+Element14=
+[Massen]
+Masse0=
+Masse1=
+Masse2=
+Masse3=
+Masse4=
+Masse5=
+Masse6=
+Masse7=
+Masse8=
+Masse9=
+Masse10=
+Masse11=
+Masse12=
+Masse13=
+Masse14=
